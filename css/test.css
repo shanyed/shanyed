@@ -1,0 +1,29 @@
+html {
+    font-size: 100%; /* 设置默认字体大小为浏览器默认大小，通常为16px */
+    -webkit-text-size-adjust: 100%; /* 在 Safari 中确保文本大小不会自动调整 */
+    -ms-text-size-adjust: 100%; /* 在 IE 中确保文本大小不会自动调整 */
+    box-sizing: border-box; /* 设置盒模型为边框模型，即宽度和高度包括内容、内边距和边框 */
+}
+
+body {
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, 'source-han-serif-sc', 'Source Han Serif SC', 'Source Han Serif CN', 'Source Han Serif TC', 'Source Han Serif', 'Songti SC', 'Microsoft YaHei', serif;
+    line-height: 1.6; /* 设置行高为字体大小的1.6倍，提高可读性 */
+    text-align: left;
+    list-style-type: none;
+    margin: 0; /* 清除默认的外边距 */
+    padding: 0; /* 清除默认的内边距 */
+}
+
+/* 其他样式不变 */
+
+/* 响应式布局设置 */
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 90%; /* 在小屏幕上适当调整字体大小 */
+    }
+    .main {
+        width: 90%; /* 在小屏幕上使用百分比宽度，使内容更适应屏幕 */
+        margin: 0 auto; /* 居中显示 */
+        padding: 0 10px; /* 添加一些内边距 */
+    }
+}
