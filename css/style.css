@@ -68,7 +68,8 @@ html {
     background-color: lavender;
   }
   s{
-    background-color: gainsboro;
+    background-color: gainsboro; 
+   
   }
   /*Layout*/
   
@@ -184,7 +185,12 @@ html {
     font-weight: bold;
   }
   
-  
+ 
+aside {
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+}
+
   /*页面变化布局变化*/ 
   /*选定仅文本，而不是整个页面宽度*/ 
   /* @media*/
