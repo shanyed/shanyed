@@ -191,6 +191,18 @@ aside {
   font-family: Arial, sans-serif;
 }
 
+.main nav ul li {
+  margin-bottom: 5px; /* 设置导航项间距 */
+}
+
+.main p {
+  line-height: 1.6; /* 设置段落行高 */
+  margin-bottom: 20px; /* 设置段落下方间距 */
+}
+
+
+
+
   /*页面变化布局变化*/ 
   /*选定仅文本，而不是整个页面宽度*/ 
   /* @media*/
