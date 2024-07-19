@@ -163,6 +163,10 @@ html {
     border-right: 2px solid gainsboro;
     min-height: calc(100vh - 60px);
     text-align: justify; 
+     font-size: 17px; /* 主内容的字体大小 */
+  }
+  .main p {
+    line-height: 2; /* 调整段落行间距 */
   }
   
   .indent{
