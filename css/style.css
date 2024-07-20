@@ -163,12 +163,11 @@ html {
     border-right: 2px solid gainsboro;
     min-height: calc(100vh - 60px);
     text-align: justify; 
-     font-size: 16.5px; /* 主内容的字体大小 */
+    font-size: 16.5px; /* 主内容的字体大小 */
   }
   .main p {
     line-height: 2; /* 调整段落行间距 */
   }
-  
   .indent{
     text-indent: 2em;
   }
@@ -226,20 +225,18 @@ aside {
 }
 .video-container {
   position: relative;
-  width: 95%; /* 调整视频容器的宽度 */
-  height: 320px; /* 调整视频容器的高度 */
-  margin: 0.5px auto; /* 使视频容器居中，并添加顶部和底部的间距 */
+  width: 86%; /* 调整视频容器的宽度 */
+  height: 260px; /* 调整视频容器的高度 */
+  margin: 0.1px auto; /* 使视频容器居中，并添加顶部和底部的间距 */
   border: 2px solid #ffffff; /* 给视频容器添加边框 */
-  padding: 0.5px; /* 给视频容器添加内边距 */
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* 给视频容器添加阴影 */
+  padding: 0.1px; /* 给视频容器添加内边距 */
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.5); /* 给视频容器添加阴影 */
 }
 
 iframe {
   width: 100%;
   height: 100%;
 }
-
-
 
   /*页面变化布局变化*/ 
   /*选定仅文本，而不是整个页面宽度*/ 
