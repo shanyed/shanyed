@@ -426,7 +426,7 @@ figcaption {
     font-family: 'Noto Sans HK', sans-serif;
     font-weight: 300;
     font-size: 0.8rem;
-    width: 100%; /* 改为 100%，避免 min(100%, 720px) 限制 */
+    width: 100%;
     margin: calc(var(--spacing-unit) * 1) auto; /* 减少顶部外边距，适配手机端 */
     padding: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 1) env(safe-area-inset-bottom); /* 调整内边距 */
     border-top: 1px solid var(--misc-divider);
