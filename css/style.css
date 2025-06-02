@@ -31,6 +31,10 @@ html {
   }
 }
 
+.main .paperlist li {
+  list-style-type: none;
+}
+
 /* Typography */
 body {
   font-family: 'Noto Sans HK', -apple-system, system-ui, sans-serif;
@@ -93,6 +97,7 @@ s {
 
 /* Layout */
 header {
+   display: none; /* Hidden by default, shown on mobile */
   font-family: 'Noto Sans HK', sans-serif;
   font-weight: 300;
   font-size: var(--font-size-base);
@@ -105,7 +110,6 @@ header {
   display: flex;
   align-items: center;
   min-height: 75px;
-  display: none; /* Hidden by default, shown on mobile */
 }
 
 .header-menu {
@@ -255,12 +259,12 @@ blockquote {
   font-family: 'Noto Sans HK', sans-serif;
   font-weight: 300;
   font-size: 0.8rem;
-  width: min(100%, 720px); /* 改动点1：与正文宽度保持一致，例如 720px */
-  margin: calc(var(--spacing-unit) * 3) auto calc(var(--spacing-unit) * 1); /* 改动点2：水平居中 */
+  width: min(100%, 720px); 
+  margin: calc(var(--spacing-unit) * 3) auto calc(var(--spacing-unit) * 1); 
   padding: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 2) 0;
-  border-top: 1px solid var(--misc-divider); /* 分隔线仍保留 */
-  display: flex; /* 改动点3：居中显示，使用 flex */
-  justify-content: center; /* 居中内容 */
+  border-top: 1px solid var(--misc-divider); 
+  display: flex; 
+  justify-content: center; 
 }
 
 .footer-content {
@@ -345,6 +349,7 @@ figcaption {
   }
 
   header li {
+    list-style-type: none;
     margin: 0 15px;
   }
 
@@ -375,6 +380,10 @@ figcaption {
     width: 95%;
     padding: 0 calc(var(--spacing-unit) * 0.5);
     font-size: var(--font-size-small);
+  }
+
+  .main .paperlist li {
+    list-style-type: none; /* 移除手机端列表圆点 */
   }
 
   .footer {
