@@ -340,7 +340,7 @@ figcaption {
 /* Responsive */
 @media screen and (max-width: 1100px) {
   nav {
-    display: none; /* 隐藏侧边栏导航 */
+    display: none;
   }
 
   header {
@@ -361,7 +361,7 @@ figcaption {
 
 @media screen and (max-width: 600px) {
   header {
-    font-size: var(--font-size-small);
+    display: none;
   }
 
   .header-menu {
@@ -377,46 +377,45 @@ figcaption {
   }
 
   nav {
-    display: block; /* 重新显示导航栏 */
+    display: block;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%; /* 全屏宽度 */
-    height: auto; /* 高度自适应内容 */
+    width: 100%;
+    height: auto;
     background: #f0f0f0;
-    border-bottom: 1px solid var(--misc-divider); /* 底部边框代替右侧边框 */
-    border-right: none; /* 移除右侧边框 */
-    z-index: 100; /* 确保导航栏在其他元素之上 */
+    border-bottom: 1px solid var(--misc-divider);
+    border-right: none;
+    z-index: 100;
   }
 
   nav h2 {
-    font-size: clamp(1rem, 4vw, 1.2rem); /* 调整导航标题大小 */
-    margin: calc(var(--spacing-unit) * 0.5) 0; /* 调整间距 */
+    display: none;
   }
 
   nav ul.sidebar {
     display: flex;
-    flex-direction: row; /* 水平排列 */
-    justify-content: center; /* 居中对齐 */
-    gap: calc(var(--spacing-unit) * 0.5); /* 链接间距 */
+    flex-direction: row;
+    justify-content: center;
+    gap: calc(var(--spacing-unit) * 0.5);
     padding: 0 calc(var(--spacing-unit) * 1);
     margin-bottom: calc(var(--spacing-unit) * 0.5);
   }
 
   nav ul.sidebar li {
-    line-height: 1.5; /* 调整行高 */
+    line-height: 1.5;
   }
 
   nav ul.sidebar li a {
-    font-size: var(--font-size-small); /* 调整链接字体大小 */
-    padding: calc(var(--spacing-unit) * 0.25); /* 缩小内边距 */
+    font-size: var(--font-size-small);
+    padding: calc(var(--spacing-unit) * 0.25);
   }
 
   .main {
     width: 95%;
     padding: 0 calc(var(--spacing-unit) * 0.5);
     font-size: var(--font-size-small);
-    margin-top: calc(var(--spacing-unit) * 6); /* 为导航栏留出空间 */
+    margin-top: calc(var(--spacing-unit) * 3);
   }
 
   .main .paperlist li {
@@ -427,16 +426,16 @@ figcaption {
     font-family: 'Noto Sans HK', sans-serif;
     font-weight: 300;
     font-size: 0.8rem;
-    width: min(100%, 720px);
-    margin: calc(var(--spacing-unit) * 3) auto calc(var(--spacing-unit) * 1);
-    padding: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 2) 0;
+    width: 100%; /* 改为 100%，避免 min(100%, 720px) 限制 */
+    margin: calc(var(--spacing-unit) * 1) auto; /* 减少顶部外边距，适配手机端 */
+    padding: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 1) env(safe-area-inset-bottom); /* 调整内边距 */
     border-top: 1px solid var(--misc-divider);
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: var(--spacing-unit);
+    flex-direction: column; /* 垂直排列 */
+    justify-content: center; /* 纵向居中 */
+    align-items: center; /* 横向居中 */
+    text-align: center; /* 确保文本居中 */
     height: auto;
-    padding-bottom: env(safe-area-inset-bottom);
   }
 
   .footer-content {
@@ -454,6 +453,7 @@ figcaption {
   .footer-language {
     display: flex;
     gap: calc(var(--spacing-unit) * 0.5);
+    justify-content: center; /* 确保语言切换居中 */
   }
 
   .footer-link {
