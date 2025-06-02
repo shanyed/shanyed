@@ -1,12 +1,51 @@
+:root {
+  --text-primary: #060101;
+  --text-secondary: #82868c;
+  --misc-divider: rgba(0, 0, 0, 0.8);
+  --spacing-unit: 1rem;
+  --font-size-base: 1rem;
+  --font-size-small: 0.875rem;
+  --line-height-base: 1.6;
+  --line-height-spacious: 2;
+}
+
 body {
-    font-family: "Noto Serif SC",Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, 'source-han-serif-sc', 'Source Han Serif SC', 'Source Han Serif CN', 'Source Han Serif TC', 'Source Han Serif TW', 'Source Han Serif', 'Songti SC', 'Microsoft YaHei', serif;
+  font-family: 'Noto Sans HK', -apple-system, system-ui, sans-serif;
+  font-weight: 300;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--text-primary);
+}
+
+.home blockquote, .cn blockquote {
+  font-family: 'Noto Sans HK', -apple-system, system-ui, sans-serif;
+  font-weight: 300;
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-spacious);
+  color: var(--text-secondary);
+  padding: 0 calc(var(--spacing-unit) * 2);
+  border-left: 3px solid var(--misc-divider);
+  margin: var(--spacing-unit) 0;
+}
+
+code, pre {
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-base);
+  color: var(--text-primary);
+}
+
+/* 响应式 */
+@media (max-width: 600px) {
+  body {
+    font-size: var(--font-size-small);
   }
+
   .home blockquote, .cn blockquote {
-    font-family: 'Palatino Linotype', 'Book Antiqua','STKaiti', 'KaiTi', '楷体', 'SimKai', 'Palatino',  'DFKai-SB', 'NSimSun', serif;
+    font-size: 0.75rem;
   }
-  code {
-    font-family: Consolas, Courier, "Courier New", 'STKaiti', 'KaiTi', 'SimKai', monospace;
+
+  code, pre {
+    font-size: 0.75rem;
   }
-  pre, code {
-    font-size: .95em;
-  }
+}
