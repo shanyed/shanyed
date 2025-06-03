@@ -200,10 +200,6 @@ ul.sidebar li a {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 100px; /* Adjust this value based on the widest nav item */
-  height: 50px; /* Matches ul.sidebar line-height */
-  padding: 0 calc(var(--spacing-unit) * 0.5); /* Consistent padding */
-  box-sizing: border-box;
 }
 
 .footer {
@@ -416,10 +412,7 @@ iframe {
   .theme-toggle {
     font-size: var(--font-size-small);
     padding: calc(var(--spacing-unit) * 0.5);
-    height: 40px;             /* Adjust height for mobile */
-  }
-  ul.sidebar li {
-    line-height: 40px;        /* Adjust line-height for mobile */
+    height: 40px;           
   }
 
   nav {
@@ -438,26 +431,6 @@ iframe {
 
   nav h2 {
     display: none;
-  }
-
-  nav ul.sidebar {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: calc(var(--spacing-unit) * 0.75);
-    padding: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 1);
-    margin: 0;
-  }
-
-  nav ul.sidebar li {
-    line-height: 1.8;
-  }
-
-  nav ul.sidebar li a {
-    font-size: var(--font-size-small);
-    padding: calc(var(--spacing-unit) * 0.5);
-    white-space: nowrap;
   }
 
   .main {
