@@ -432,7 +432,29 @@ iframe {
   nav h2 {
     display: none;
   }
+  
+  nav ul.sidebar {
+    display: flex;
+    flex-direction: row;      /* Ensure horizontal layout */
+    justify-content: center;  /* Center items horizontally */
+    align-items: center;      /* Align items vertically in the center */
+    gap: calc(var(--spacing-unit) * 0.75); /* Space between items */
+    padding: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 1); /* Horizontal padding */
+    margin: 0;
+    flex-wrap: nowrap;        /* Prevent wrapping to new lines */
+  }
 
+  nav ul.sidebar li {
+    line-height: 1;           /* Remove vertical spacing from line-height */
+  }
+
+  nav ul.sidebar li a {
+    font-size: var(--font-size-small);
+    padding: calc(var(--spacing-unit) * 0.5);
+    white-space: nowrap;      /* Prevent text wrapping */
+    min-width: 0;             /* Allow natural width based on content */
+  }
+  
   .main {
     width: 90%;
     margin: calc(var(--spacing-unit) * 4) auto calc(var(--spacing-unit) * 2);
