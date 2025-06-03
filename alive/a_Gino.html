@@ -9,7 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="../css/style.css">
         <link rel="stylesheet" type="text/css" href="../css/font.css">
         <link rel="icon" href="../picture/fish.jpg" type="image/x-icon"/>
-		<title>随笔 </title>
+		
 	</head>
 
 	<body>
@@ -17,14 +17,14 @@
 			<h2>·随笔</h2>
 				<ul class="sidebar">
 					<li><a href="../index.html">首页</a></li>
-                    <li><a href="../art.html">目录</a></li>
+                    <li><a href="../art.html"style="color:darkblue;">目录</a></li>
 					<li><a href="../dream/dream.html">梦境</a></li>
 					<li><a href="../illusion/reading.html">札记</a></li>
 				</ul>
 		</nav>
 		<div class="main">
          <h1>蔑视基诺</h1>
-         <div class="name">D \ 2024年4月13日</div>
+         <div class="name">D - 2024年4月13日</div>
 		 <p>最近在二刷《我的天才女友》，由意大利作家埃莱娜·费兰特的文学作品《那不勒斯四部曲》改编而来。书和剧都十分精彩。有一个片段让人印象深刻，显现出20世纪中期意大利老旧城区里无数把传统的刺刀，深深刺入女性的躯体和心灵。剧情在讲莱农正面临身体发育所带来的困惑，胸部变得丰满，以及经历了第一次月经来潮。青春期的时候，我们从未停止对同性与异性身体的好奇与探索。
 			莱农的同学基诺与同学打赌，赌她的胸部是真的，并不是往里面塞了棉花。因此，基诺与他的同学把莱农堵在卫生间，说只要让他们两个看见是真的，他们的赌注（硬币）就归莱农。
 			 </p>
@@ -39,5 +39,11 @@
        
 		<div class="footer">Jie Ding©2025</div>		
 		</div>
+	<script>
+    const h1 = document.querySelector('h1');
+    if (h1) {
+      document.title = h1.innerText + " | Jie Ding";
+    }
+  </script>	
 	</body>
 </html>

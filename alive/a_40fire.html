@@ -9,7 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="../css/style.css">
         <link rel="stylesheet" type="text/css" href="../css/font.css">
         <link rel="icon" href="../picture/fish.jpg" type="image/x-icon"/>
-		<title>随笔 </title>
+		
 		
 	</head>
 
@@ -18,14 +18,14 @@
 			<h2>·随笔</h2>
 				<ul class="sidebar">
 					<li><a href="../index.html">首页</a></li>
-                    <li><a href="../art.html">目录</a></li>
+                    <li><a href="../art.html"style="color:darkblue;">目录</a></li>
 					<li><a href="../dream/dream.html">梦境</a></li>
 					<li><a href="../illusion/reading.html">札记</a></li>
 				</ul>
 		</nav>
 		<div class="main">
          <h1>野火</h1>
-         <div class="name">D \ 2024年8月7日</div>
+         <div class="name">D - 2024年8月7日</div>
         
          <p>天空是什么颜色？在低头走路的日子里，缺少观察便不知该如何回答，只说是蓝色，索然无味了些。地面上的枯叶，忧郁的拢在一团，面容惨淡。没有一片正经树叶是想要脱离安全又高高在上的树枝的。现在，它们躺在地上，被太阳晒得卷起了边，毫无用处的沉默着。怪可惜的，叶面平整些才更具美感，加工后还可拿来用作书签。
         </p>
@@ -65,5 +65,11 @@
         </p>
 		<div class="footer">Jie Ding©2025</div>		
 		</div>
-	</body>
+	<script>
+    const h1 = document.querySelector('h1');
+    if (h1) {
+      document.title = h1.innerText + " | Jie Ding";
+    }
+  </script>	
+    </body>
 </html>

@@ -9,7 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="../css/style.css">
         <link rel="stylesheet" type="text/css" href="../css/font.css">
         <link rel="icon" href="../picture/fish.jpg" type="image/x-icon"/>
-		<title>随笔 </title>
+		
 	</head>
 
 	<body>
@@ -17,14 +17,14 @@
 			<h2>·随笔</h2>
 				<ul class="sidebar">
 					<li><a href="../index.html">首页</a></li>
-                    <li><a href="../art.html">目录</a></li>
+                    <li><a href="../art.html"style="color:darkblue;">目录</a></li>
 					<li><a href="../dream/dream.html">梦境</a></li>
 					<li><a href="../illusion/reading.html">札记</a></li>
 				</ul>
 		</nav>
 		<div class="main">
          <h1>平凡的时刻</h1>
-         <div class="name">D \ 2020年10月23日</div>
+         <div class="name">D - 2020年10月23日</div>
          <p>随手记录相当普通无奇的一天，顺着生命轨迹来看，竟然是影响生命旅程接下来走向的时刻。<br>
             当时还以为只是普通的一天。
         </p>
@@ -32,5 +32,11 @@
        
 		<div class="footer">Jie Ding©2025</div>		
 		</div>
+	<script>
+    const h1 = document.querySelector('h1');
+    if (h1) {
+      document.title = h1.innerText + " | Jie Ding";
+    }
+  </script>	
 	</body>
 </html>

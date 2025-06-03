@@ -9,7 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="../css/style.css">
         <link rel="stylesheet" type="text/css" href="../css/font.css">
         <link rel="icon" href="../picture/fish.jpg" type="image/x-icon"/>
-		<title>随笔 </title>
+		
 		
 	</head>
 
@@ -18,14 +18,14 @@
 			<h2>·随笔</h2>
 				<ul class="sidebar">
 					<li><a href="../index.html">首页</a></li>
-                    <li><a href="../art.html">目录</a></li>
+                    <li><a href="../art.html"style="color:darkblue;">目录</a></li>
 					<li><a href="../dream/dream.html">梦境</a></li>
 					<li><a href="../illusion/reading.html">札记</a></li>
 				</ul>
 		</nav>
 		<div class="main">
          <h1>柿柿如意</h1>
-         <div class="name">D \ 2024年10月31日</div>
+         <div class="name">D - 2024年10月31日</div>
        
         <p>
             换季就是会易感甲流、乙流、支原体。 <br>
@@ -40,13 +40,14 @@
             每一次路过，这个念头就起一次，基本每天折返四次，没有任何一次我真的有行动。这个念头如同柿子一样，被长久的高高挂起，直至腐烂。<br>
 	    <br>
 	    事事如意是一个美好的愿望。之所以美好，是因为这是一个愿望。而愿望就是愿望。
-        
-        
         </p>
-
-        
-       
 		<div class="footer">Jie Ding©2025</div>		
 		</div>
-	</body>
+	<script>
+    const h1 = document.querySelector('h1');
+    if (h1) {
+      document.title = h1.innerText + " | Jie Ding";
+    }
+  </script>	
+  </body>
 </html>

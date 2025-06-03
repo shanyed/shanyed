@@ -9,21 +9,22 @@
 		<link rel="stylesheet" type="text/css" href="../css/style.css">
         <link rel="stylesheet" type="text/css" href="../css/font.css">
         <link rel="icon" href="../picture/fish.jpg" type="image/x-icon"/>
-		<title>随笔 </title>
+		
 	</head>
 
 	<body>
 		<nav>
-			<h2><a href="../art.html">· 随笔 </a></h2>
-			<ul class="sidebar">
-				<li><a href="./dream.html">梦境</a></li>
-				<li><a href="../index.html">首页</a></li>
-			</ul>
-	   </nav>
-	   
+			<h2>·随笔</h2>
+				<ul class="sidebar">
+					<li><a href="../index.html">首页</a></li>
+                    <li><a href="../art.html">目录</a></li>
+					<li><a href="../dream/dream.html" style="color: #01847F;">梦境</a></li>
+					<li><a href="../illusion/reading.html">札记</a></li>
+				</ul>
+		</nav>
 		<div class="main">
          <h1>死亡万花筒</h1>
-         <div class="name">D \ 2024年8月3日</div>
+         <div class="name">D - 2024年8月3日</div>
          <p>
             我远远的观望着房屋的爆炸，烟云雾成团状围绕着火，还会有人炸入空中翻滚掉落。有些人成了黑碳，有些人半死不活。
             这场爆炸带来了致命的破坏，尽管急救设备和医务人员来的及时，没有能存活的伤患。
@@ -39,5 +40,11 @@
        
 		<div class="footer">Jie Ding©2025</div>		
 		</div>
+	<script>
+    const h1 = document.querySelector('h1');
+    if (h1) {
+      document.title = h1.innerText + " | Jie Ding";
+    }
+  </script>	
 	</body>
 </html>

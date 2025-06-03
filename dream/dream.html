@@ -10,25 +10,25 @@
 		<link rel="stylesheet" type="text/css" href="../css/style.css">
         <link rel="stylesheet" type="text/css" href="../css/font.css">
         <link rel="icon" href="../picture/fish.jpg" type="image/x-icon"/>
-		<title>随笔 </title>
+		
 		
 	</head>
 
 	<body>
 		<nav>
-			<h2><a href="../art.html">·随笔</a></h2>
+			<h2>·随笔</h2>
 				<ul class="sidebar">
-					<!-- 
-					<li><a href="./dream.html">梦境</a></li>
-					<li><a href="../box/box.html">盒子</a></li>
-					 -->
 					<li><a href="../index.html">首页</a></li>
+                   <li><a href="../art.html">目录</a></li>
+					<li><a href="../dream/dream.html" style="color: #01847F;">梦境</a></li>
+					<li><a href="../illusion/reading.html">札记</a></li>
 				</ul>
 		</nav>
 		<div class="main">
 			<h1 class="header"> 梦境</h1>
 			<h2>2024</h2>
 			<div class="paperlist">
+				<li><a href="d10_FourDreams.html">- 四个梦境</a></li><!-- 250602 -->
 				<li><a href="d_51cloud.html">- 氤氲</I></a></li><!-- 241108 -->
 				<li><a href="d_53wise.html">- 智商测试85分</I></a></li><!-- 241104 -->
 		        <li><a href="d_46died.html">- 谁是凶手</I></a></li><!-- 241020 -->
@@ -49,5 +49,11 @@
 				
 			<div class="footer">Jie Ding©2025</div>		
 		</div>	
+	<script>
+    const h1 = document.querySelector('h1');
+    if (h1) {
+      document.title = h1.innerText + " | Jie Ding";
+    }
+  </script>	
 	</body>
 </html>

@@ -9,7 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="../css/style.css">
         <link rel="stylesheet" type="text/css" href="../css/font.css">
         <link rel="icon" href="../picture/fish.jpg" type="image/x-icon"/>
-		<title>随笔 </title>
+		
 	</head>
 
 	<body>
@@ -17,14 +17,14 @@
 			<h2>·随笔</h2>
 				<ul class="sidebar">
 					<li><a href="../index.html">首页</a></li>
-                    <li><a href="../art.html">目录</a></li>
+                    <li><a href="../art.html"style="color:darkblue;">目录</a></li>
 					<li><a href="../dream/dream.html">梦境</a></li>
 					<li><a href="../illusion/reading.html">札记</a></li>
 				</ul>
 		</nav>
 		<div class="main">
          <h1>正确的旗帜</h1>
-         <div class="name">D \ 2024年5月20日</div>
+         <div class="name">D - 2024年5月20日</div>
         <p>
             在社交的过程中看见自己模糊的形状，这个发现令我十分沮丧。<br>
             堂弟说，无论如何，在五月的时候就应该听一场五月天的演唱会。他不听婉言相拒和直白的拒绝，固执的希望我与他同去。但这不是一笔我乐意并且能够负担的消费，我同他小心解释这一点。之后，他勉强退掉了两张看台票，买了一张寂寞的内场票。
@@ -60,5 +60,11 @@
 
 		<div class="footer">Jie Ding©2025</div>		
 		</div>
-	</body>
+	<script>
+    const h1 = document.querySelector('h1');
+    if (h1) {
+      document.title = h1.innerText + " | Jie Ding";
+    }
+  </script>	
+    </body>
 </html>

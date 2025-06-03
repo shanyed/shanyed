@@ -9,21 +9,22 @@
         <link rel="stylesheet" type="text/css" href="../css/style.css">
         <link rel="stylesheet" type="text/css" href="../css/font.css">
         <link rel="icon" href="../picture/fish.jpg" type="image/x-icon"/>
-		<title>随笔 </title>
+		
 	</head>
 
 	<body>
 		<nav>
-			<h2><a href="../art.html">· 随笔 </a></h2>
-			<ul class="sidebar">
-				<li><a href="./dream.html">梦境</a></li>
-				<li><a href="../index.html">首页</a></li>
-			</ul>
-	   </nav>
-	   
+			<h2>·随笔</h2>
+				<ul class="sidebar">
+					<li><a href="../index.html">首页</a></li>
+                    <li><a href="../art.html">目录</a></li>
+					<li><a href="../dream/dream.html" style="color: #01847F;">梦境</a></li>
+					<li><a href="../illusion/reading.html">札记</a></li>
+				</ul>
+		</nav>
 		<div class="main">
          <h1>我的Knife</h1>
-         <div class="name">D \ 2024年1月10日</div>
+         <div class="name">D - 2024年1月10日</div>
          <p>我的奈武，我的奈武，我的奈武！ </p>
             <p>我的心已经碎了，我无法停止绕着这个星球跑步，无法停止欺骗自己，等我再次来到这里，我将看到你重新站在这里，正要和我一起在这个孤独的星球上去跑跑步。你会回来的，你一定会的！</p>
             <p>就在几分钟前，我眼睁睁看着兰德与奈武的厮杀，奈武始终无法近身攻击，已是败局，在遭受了兰德的致命一击后，奈武距离魂飞魄散不远了。但当兰德对我产生致命威胁的时候，奈武拖着濒死之躯拿掉了兰德的头颅。整个星球，留我一个人面对正在消逝的奈武。</p>
@@ -52,5 +53,11 @@
        
 		<div class="footer">Jie Ding©2025</div>		
 		</div>
+	<script>
+    const h1 = document.querySelector('h1');
+    if (h1) {
+      document.title = h1.innerText + " | Jie Ding";
+    }
+  </script>	
 	</body>
 </html>

@@ -9,7 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="../css/style.css">
         <link rel="stylesheet" type="text/css" href="../css/font.css">
         <link rel="icon" href="../picture/fish.jpg" type="image/x-icon"/>
-		<title>随笔 </title>
+		
 	</head>
 
 	<body>
@@ -17,14 +17,14 @@
 			<h2>·随笔</h2>
 				<ul class="sidebar">
 					<li><a href="../index.html">首页</a></li>
-                    <li><a href="../art.html">目录</a></li>
+                    <li><a href="../art.html"style="color:darkblue;">目录</a></li>
 					<li><a href="../dream/dream.html">梦境</a></li>
 					<li><a href="../illusion/reading.html">札记</a></li>
 				</ul>
 		</nav>
 		<div class="main">
          <h1>寻清净处</h1>
-         <div class="name">D \ 2023年7月6日</div>
+         <div class="name">D - 2023年7月6日</div>
          <p>
             这里很吵闹，哪里都有声音，没有人静下来，我的眼睛看见了他们没有发出声音的语言。
             闭上眼，是不是会好一点？在热闹的午后，三三两两围成一桌激烈的闲谈，有一个想要闭上眼的人，她是这么觉得，闭上眼比闭上耳好实现的多。<br>
@@ -34,9 +34,13 @@
             冬冬永远都悟不到她有何不妥之处，这其中对错也永远没有人说给她听。<br>
             不是他们吵闹，是我心里的声音聒噪。</p>
         </p>
-
-       
 		<div class="footer">Jie Ding©2025</div>		
 		</div>
+	<script>
+    const h1 = document.querySelector('h1');
+    if (h1) {
+      document.title = h1.innerText + " | Jie Ding";
+    }
+  </script>	
 	</body>
 </html>
