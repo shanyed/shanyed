@@ -454,7 +454,7 @@ iframe {
     white-space: nowrap;      /* Prevent text wrapping */
     min-width: 0;             /* Allow natural width based on content */
   }
-  
+
   .main {
     width: 90%;
     margin: calc(var(--spacing-unit) * 4) auto calc(var(--spacing-unit) * 2);
