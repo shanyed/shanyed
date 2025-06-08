@@ -1,16 +1,18 @@
 :root {
   --text-primary: #060101;
   --text-secondary: #82868c;
-  --misc-divider: rgba(0, 0, 0, 0.8);
+  --misc-divider: rgba(0, 0, 0, 0.2);
   --spacing-unit: 1rem;
   --font-size-base: 1rem;
   --font-size-small: 0.875rem;
   --line-height-base: 1.6;
   --line-height-spacious: 2;
+  --blockquote-background: #e8ecef; 
+  --blockquote-background-dark: #2a2a2a;
 }
 
 body {
-  font-family: 'Noto Sans HK', -apple-system, system-ui, sans-serif;
+  font-family: 'Times New Roman','Noto Sans HK', -apple-system, system-ui, sans-serif;
   font-weight: 300;
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
@@ -18,7 +20,7 @@ body {
 }
 
 .home blockquote, .cn blockquote {
-  font-family: 'Noto Sans HK', -apple-system, system-ui, sans-serif;
+  font-family: 'Times New Roman','Noto Sans HK', -apple-system, system-ui, sans-serif;
   font-weight: 300;
   font-size: var(--font-size-small);
   line-height: var(--line-height-spacious);
