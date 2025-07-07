@@ -59,12 +59,12 @@ html[data-theme="dark"] {
   padding-bottom: 2px;
   border-bottom: none;
   transition: var(--transition);
-  display: flex;             
-  justify-content: center;    
-  align-items: center;        
+  display: flex;              /* Use flexbox for centering */
+  justify-content: center;    /* Center horizontally */
+  align-items: center;        /* Center vertically */
             
-  height: 50px;               
-  box-sizing: border-box;    
+  height: 50px;               /* Match the line-height of ul.sidebar (adjust if needed) */
+  box-sizing: border-box;     /* Include padding in width/height calculations */
 }
 
 .theme-toggle:hover {
@@ -96,7 +96,7 @@ body {
 }
 
 h1, .track-title {
-  font-family:  'Times New Roman','Noto Serif SC', serif;
+  font-family: 'Noto Serif SC', serif;
   font-weight: 700;
   font-size: clamp(1.2rem, 3vw, var(--font-size-medium));
   text-align: center;
@@ -105,7 +105,7 @@ h1, .track-title {
 }
 
 h2 {
-  font-family:  'Times New Roman','Noto Serif SC', serif;
+  font-family: 'Noto Serif SC', serif;
   font-weight: 700;
   font-size: clamp(1rem, 2.5vw, 1.25rem);
   text-align: center;
@@ -115,7 +115,7 @@ h2 {
 }
 
 h3, h4, h5, h6 {
-  font-family:  'Times New Roman','Noto Serif SC', serif;
+  font-family: 'Noto Serif SC', serif;
   font-weight: 700;
   font-size: clamp(1.125rem, 2.5vw, 1.25rem);
   color: var(--text-primary);
@@ -205,7 +205,7 @@ ul.sidebar li a {
 }
 
 .footer {
-  font-family:  'Times New Roman','Noto Sans HK', sans-serif;
+  font-family: 'Noto Sans HK', sans-serif;
   font-weight: 300;
   font-size: 0.8rem;
   width: 100%;
@@ -455,20 +455,20 @@ iframe {
     justify-content: center;  /* Center items horizontally */
     align-items: center;      /* Align items vertically in the center */
     gap: calc(var(--spacing-unit) * 0.75); /* Space between items */
-    padding: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 1); 
+    padding: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 1); /* Horizontal padding */
     margin: 0;
-    flex-wrap: nowrap;        
+    flex-wrap: nowrap;        /* Prevent wrapping to new lines */
   }
 
   nav ul.sidebar li {
-    line-height: 1;          
+    line-height: 1;           /* Remove vertical spacing from line-height */
   }
 
   nav ul.sidebar li a {
     font-size: var(--font-size-small);
     padding: calc(var(--spacing-unit) * 0.5);
-    white-space: nowrap;     
-    min-width: 0;            
+    white-space: nowrap;      /* Prevent text wrapping */
+    min-width: 0;             /* Allow natural width based on content */
   }
 
   .main {
@@ -537,4 +537,66 @@ iframe {
     font-size: var(--font-size-small);
     padding: 2px 6px;
   }
+}
+/* Table Styling  */
+table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  margin: var(--spacing-unit) 0;
+  background-color: var(--misc-background);
+  font-size: var(--font-size-base);
+  color: var(--text-primary);
+  transition: var(--transition);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  table-layout: auto; 
+}
+
+table thead {
+  background-color: #e0e0e0;
+  color: var(--text-primary);
+  font-weight: 700;
+  font-family: 'Noto Serif SC', serif;
+  text-align: center;
+}
+
+html[data-theme="dark"] table thead {
+  background-color: #2a2a2a;
+  color: var(--text-primary-dark);
+}
+
+table th{
+  padding: 0.75rem 0.75rem;          /* 控制上下空间 */
+  line-height: 0.75;               /* 控制行内文本的行高 */
+  vertical-align: middle;         /* 垂直居中 */
+}
+table td {
+  border: 1px solid var(--misc-divider);
+  padding: 0.5rem 1rem;
+  text-align: center;
+  vertical-align: middle;
+  line-height: var(--line-height-base);
+}
+
+table tbody tr:nth-child(even) {
+  background-color: rgba(0,0,0,0.025);
+}
+
+html[data-theme="dark"] table tbody tr:nth-child(even) {
+  background-color: rgba(255,255,255,0.025);
+}
+
+table tbody tr:hover {
+  background-color: rgba(127,127,127,0.1);
+  transition: var(--transition);
+}
+
+html[data-theme="dark"] table tbody tr:hover {
+  background-color: rgba(255,255,255,0.05);
+}
+.scroll-container {
+  overflow-x: auto;
+  width: 100%;
 }
