@@ -10,7 +10,7 @@
   --font-size-large: 2.25rem;
   --font-size-medium: 1.75rem;
   --font-size-small: 0.9375rem;
-  --line-height-base: 1.6;
+  --line-height-base: 2;
   --line-height-spacious: 2;
   --transition: all 0.3s ease;
   --heading-spacing: 2rem;
@@ -22,6 +22,8 @@
   --link-hover-background-dark: #7979da;
   --blockquote-background: #e8ecef; 
   --blockquote-background-dark: #2a2a2a;
+  --code-background: #f2f2f2;
+
 }
 
 html {
@@ -40,6 +42,7 @@ html[data-theme="dark"] {
   --misc-divider: var(--misc-divider-dark);
   --code-background: var(--code-background-dark);
   --link-hover-background: var(--link-hover-background-dark);
+  --blockquote-background: var(--blockquote-background-dark);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -274,18 +277,24 @@ pre {
 }
 
 sup a {
-  font-size: var(--font-size-small);
+  font-size: 0.7em;
   vertical-align: super;
-  line-height: 0;
-  margin-left: calc(var(--spacing-unit) * 0.75);
-  margin-right: calc(var(--spacing-unit) * 0.75);
-  padding: 0 calc(var(--spacing-unit) * 0.25);
+  line-height: 1;
+  margin: 0 0.2em;
+  padding: 0.1em 0.4em;
+  color: var(--text-secondary);
+  background: none;
+  border-radius: 3px;
+  transition: var(--transition);
+  text-decoration: none;
 }
 
 sup a:hover {
+  color: var(--text-primary);
   background: var(--link-hover-background, lavender);
-  border-radius: 2px;
+  text-decoration: none;
 }
+
 
 aside {
   font-family: 'Noto Sans HK', sans-serif;
@@ -296,6 +305,22 @@ aside {
   margin: calc(var(--spacing-unit) * 0.5) 0;
   position: relative;
   max-width: 790px;
+}
+
+aside a {
+  text-decoration: none;
+  font-size: var(--font-size-small);
+  color: var(--text-secondary);
+  margin-right: 0.2em;
+  padding: 0.1em 0.1em;
+  border-radius: 0.75px;
+  transition: var(--transition);
+}
+
+aside a:hover {
+  color: var(--text-primary);
+  background: var(--link-hover-background);
+  text-decoration: none;
 }
 
 aside p {
@@ -533,6 +558,19 @@ iframe {
     margin: calc(var(--spacing-unit) * 0.75) 0;
   }
 
+aside a {
+  text-decoration: none;
+  font-size: 0.9em;
+  color: var(--text-secondary);
+  margin-right: 0.5em;
+}
+
+aside a:hover {
+  color: var(--text-primary);
+  background: var(--link-hover-background);
+  border-radius: 2px;
+}
+
   .code {
     font-size: var(--font-size-small);
     padding: 2px 6px;
@@ -540,8 +578,8 @@ iframe {
 }
 /* Table Styling  */
 table {
-  width: 100%;
-  max-width: 100%;
+  width: 79%;
+  max-width: 97%;
   border-collapse: collapse;
   margin: var(--spacing-unit) 0;
   background-color: var(--misc-background);
@@ -552,6 +590,8 @@ table {
   overflow: hidden;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   table-layout: auto; 
+  margin-left: auto;
+  margin-right: auto;
 }
 
 table thead {
@@ -568,13 +608,13 @@ html[data-theme="dark"] table thead {
 }
 
 table th{
-  padding: 0.75rem 0.75rem;          /* 控制上下空间 */
+  padding: 0.5rem 0.75rem;          /* 控制上下空间 */
   line-height: 0.75;               /* 控制行内文本的行高 */
   vertical-align: middle;         /* 垂直居中 */
 }
 table td {
   border: 1px solid var(--misc-divider);
-  padding: 0.5rem 1rem;
+  padding: 0.2rem 0.5rem;
   text-align: center;
   vertical-align: middle;
   line-height: var(--line-height-base);
