@@ -187,6 +187,7 @@ ul.sidebar {
 }
 
 .main p {
+  text-indent: 2em;
   line-height: var(--line-height-spacious);
   margin-bottom: calc(var(--spacing-unit) * 1.5);
 }
