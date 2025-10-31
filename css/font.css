@@ -7,20 +7,21 @@
   --font-size-small: 0.875rem;
   --line-height-base: 1.6;
   --line-height-spacious: 2;
-  --blockquote-background: #e8ecef; 
+  --blockquote-background: #e8ecef;
   --blockquote-background-dark: #2a2a2a;
 }
 
 body {
-  font-family: 'Times New Roman','Noto Sans HK', -apple-system, system-ui, sans-serif;
+  font-family: 'Times New Roman', 'Noto Sans HK', -apple-system, system-ui, sans-serif;
   font-weight: 300;
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
   color: var(--text-primary);
 }
 
-.home blockquote, .cn blockquote {
-  font-family: 'Times New Roman','Noto Sans HK', -apple-system, system-ui, sans-serif;
+.home blockquote,
+.cn blockquote {
+  font-family: 'Times New Roman', 'Noto Sans HK', -apple-system, system-ui, sans-serif;
   font-weight: 300;
   font-size: var(--font-size-small);
   line-height: var(--line-height-spacious);
@@ -30,7 +31,8 @@ body {
   margin: var(--spacing-unit) 0;
 }
 
-code, pre {
+code,
+pre {
   font-family: Consolas, 'Courier New', monospace;
   font-size: var(--font-size-small);
   line-height: var(--line-height-base);
@@ -43,11 +45,13 @@ code, pre {
     font-size: var(--font-size-small);
   }
 
-  .home blockquote, .cn blockquote {
+  .home blockquote,
+  .cn blockquote {
     font-size: 0.75rem;
   }
 
-  code, pre {
+  code,
+  pre {
     font-size: 0.75rem;
   }
 }

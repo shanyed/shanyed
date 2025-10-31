@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="D">
+    <meta name="description" content="Research blog of D | Quiet Passion">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+    <link rel="icon" href="picture/fish.jpg" type="image/x-icon" />
+
+    <style>
+        #cat {
+            position: absolute;
+            width: 36px;
+            height: 36px;
+            image-rendering: pixelated;
+            transition: left 1.6s linear, top 1.6s linear;
+            z-index: 9999;
+        }
+
+        #cat img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="cat">
+        <img src="picture/catsprite/cat.png" id="catImg" alt="pixel cat">
+    </div>
+
+    <nav>
+        <h2>· Traces of Thought</h2>
+        <ul class="sidebar">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./art.html">Notes</a></li>
+            <li><a href="./dream/dream.html">Illusory</a></li>
+        </ul>
+    </nav>
+
+    <div class="main">
+        <h1 class="header">Contents</h1>
+        <h2>2025</h2>
+        <div class="paperlist">
+
+            <li><a href="research/r1_hello.html">- Hello there!</a></li>
+
+        </div>
+    </div>
+
+    <div class="footer">©Jie 2023–2025</div>
+
+    <script>
+        const cat = document.getElementById("cat");
+        let isMoving = false;
+
+        function setRandomInitialPosition() {
+            const randomX = Math.random() * (window.innerWidth - cat.offsetWidth);
+            const randomY = Math.random() * (window.innerHeight - cat.offsetHeight);
+            cat.style.left = randomX + "px";
+            cat.style.top = randomY + "px";
+        }
+
+        function placeCatRandomly() {
+            if (isMoving) return;
+            isMoving = true;
+            const rect = cat.getBoundingClientRect();
+            const maxStep = 197;
+            let randomX = rect.left + (Math.random() * 2 - 1) * maxStep;
+            let randomY = rect.top + (Math.random() * 2 - 1) * maxStep;
+            randomX = Math.max(0, Math.min(window.innerWidth - cat.offsetWidth, randomX));
+            randomY = Math.max(0, Math.min(window.innerHeight - cat.offsetHeight, randomY));
+            const dx = randomX - rect.left;
+            const dy = randomY - rect.top;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            const speed = 0.004;
+            const duration = dist * speed;
+            cat.style.transition = `left ${duration}s linear, top ${duration}s linear`;
+            cat.style.left = randomX + "px";
+            cat.style.top = randomY + "px";
+            setTimeout(() => {
+                isMoving = false;
+            }, duration * 1000);
+        }
+
+        document.addEventListener("mousemove", (e) => {
+            const rect = cat.getBoundingClientRect();
+            const dx = e.clientX - (rect.left + rect.width / 2);
+            const dy = e.clientY - (rect.top + rect.height / 2);
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 120) {
+                placeCatRandomly();
+            }
+        });
+
+        setRandomInitialPosition();
+        placeCatRandomly();
+
+        const h1 = document.querySelector('h1');
+        if (h1) {
+            document.title = h1.innerText + " | Jie Ding";
+        }
+    </script>
+</body>
+
+</html>

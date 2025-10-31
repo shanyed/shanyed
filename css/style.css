@@ -20,7 +20,7 @@
   --misc-divider-dark: rgba(255, 255, 255, 0.2);
   --code-background-dark: #333333;
   --link-hover-background-dark: #7979da;
-  --blockquote-background: #e8ecef; 
+  --blockquote-background: #e8ecef;
   --blockquote-background-dark: #2a2a2a;
   --code-background: #f2f2f2;
 
@@ -62,12 +62,17 @@ html[data-theme="dark"] {
   padding-bottom: 2px;
   border-bottom: none;
   transition: var(--transition);
-  display: flex;              /* Use flexbox for centering */
-  justify-content: center;    /* Center horizontally */
-  align-items: center;        /* Center vertically */
-            
-  height: 50px;               /* Match the line-height of ul.sidebar (adjust if needed) */
-  box-sizing: border-box;     /* Include padding in width/height calculations */
+  display: flex;
+  /* Use flexbox for centering */
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+
+  height: 50px;
+  /* Match the line-height of ul.sidebar (adjust if needed) */
+  box-sizing: border-box;
+  /* Include padding in width/height calculations */
 }
 
 .theme-toggle:hover {
@@ -75,12 +80,16 @@ html[data-theme="dark"] {
   background: var(--link-hover-background, lavender);
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
@@ -98,7 +107,8 @@ body {
   background: var(--misc-background);
 }
 
-h1, .track-title {
+h1,
+.track-title {
   font-family: 'Noto Serif SC', serif;
   font-weight: 700;
   font-size: clamp(1.2rem, 3vw, var(--font-size-medium));
@@ -117,7 +127,10 @@ h2 {
   color: var(--text-primary);
 }
 
-h3, h4, h5, h6 {
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Noto Serif SC', serif;
   font-weight: 700;
   font-size: clamp(1.125rem, 2.5vw, 1.25rem);
@@ -138,7 +151,9 @@ a:hover {
   background: var(--link-hover-background, lavender);
 }
 
-div.paperlist a, nav a, h2 a {
+div.paperlist a,
+nav a,
+h2 a {
   border-bottom: none;
 }
 
@@ -254,7 +269,7 @@ ul.sidebar li a {
 }
 
 blockquote {
-  font-family:  'Times New Roman', 'Georgia', 'Palatino', 'Noto Sans HK', sans-serif;
+  font-family: 'Times New Roman', 'Georgia', 'Palatino', 'Noto Sans HK', sans-serif;
   font-weight: 300;
   font-size: calc(var(--font-size-small) * 1.0667);
   line-height: var(--line-height-spacious);
@@ -265,7 +280,8 @@ blockquote {
   background: var(--blockquote-background);
 }
 
-pre, code {
+pre,
+code {
   font-family: Consolas, monospace;
   font-size: var(--font-size-small);
   background: var(--code-background, darkgray);
@@ -378,7 +394,9 @@ iframe {
 }
 
 @keyframes fadeIn {
-  to { opacity: 1; }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Responsive */
@@ -420,7 +438,8 @@ iframe {
     font-size: var(--font-size-base);
   }
 
-  h1, .track-title {
+  h1,
+  .track-title {
     font-size: clamp(1rem, 5vw, var(--font-size-medium));
     margin-bottom: calc(var(--spacing-unit) * 1.5);
   }
@@ -431,7 +450,10 @@ iframe {
     margin-bottom: calc(var(--spacing-unit) * 1.5);
   }
 
-  h3, h4, h5, h6 {
+  h3,
+  h4,
+  h5,
+  h6 {
     font-size: clamp(0.875rem, 3.5vw, 1rem);
   }
 
@@ -454,7 +476,7 @@ iframe {
   .theme-toggle {
     font-size: var(--font-size-small);
     padding: calc(var(--spacing-unit) * 0.5);
-    height: 40px;           
+    height: 40px;
   }
 
   nav {
@@ -474,27 +496,36 @@ iframe {
   nav h2 {
     display: none;
   }
-  
+
   nav ul.sidebar {
     display: flex;
-    flex-direction: row;      /* Ensure horizontal layout */
-    justify-content: center;  /* Center items horizontally */
-    align-items: center;      /* Align items vertically in the center */
-    gap: calc(var(--spacing-unit) * 0.75); /* Space between items */
-    padding: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 1); /* Horizontal padding */
+    flex-direction: row;
+    /* Ensure horizontal layout */
+    justify-content: center;
+    /* Center items horizontally */
+    align-items: center;
+    /* Align items vertically in the center */
+    gap: calc(var(--spacing-unit) * 0.75);
+    /* Space between items */
+    padding: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 1);
+    /* Horizontal padding */
     margin: 0;
-    flex-wrap: nowrap;        /* Prevent wrapping to new lines */
+    flex-wrap: nowrap;
+    /* Prevent wrapping to new lines */
   }
 
   nav ul.sidebar li {
-    line-height: 1;           /* Remove vertical spacing from line-height */
+    line-height: 1;
+    /* Remove vertical spacing from line-height */
   }
 
   nav ul.sidebar li a {
     font-size: var(--font-size-small);
     padding: calc(var(--spacing-unit) * 0.5);
-    white-space: nowrap;      /* Prevent text wrapping */
-    min-width: 0;             /* Allow natural width based on content */
+    white-space: nowrap;
+    /* Prevent text wrapping */
+    min-width: 0;
+    /* Allow natural width based on content */
   }
 
   .main {
@@ -559,24 +590,25 @@ iframe {
     margin: calc(var(--spacing-unit) * 0.75) 0;
   }
 
-aside a {
-  text-decoration: none;
-  font-size: 0.9em;
-  color: var(--text-secondary);
-  margin-right: 0.5em;
-}
+  aside a {
+    text-decoration: none;
+    font-size: 0.9em;
+    color: var(--text-secondary);
+    margin-right: 0.5em;
+  }
 
-aside a:hover {
-  color: var(--text-primary);
-  background: var(--link-hover-background);
-  border-radius: 2px;
-}
+  aside a:hover {
+    color: var(--text-primary);
+    background: var(--link-hover-background);
+    border-radius: 2px;
+  }
 
   .code {
     font-size: var(--font-size-small);
     padding: 2px 6px;
   }
 }
+
 /* Table Styling  */
 table {
   width: 79%;
@@ -589,8 +621,8 @@ table {
   transition: var(--transition);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  table-layout: auto; 
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  table-layout: auto;
   margin-left: auto;
   margin-right: auto;
 }
@@ -608,11 +640,15 @@ html[data-theme="dark"] table thead {
   color: var(--text-primary-dark);
 }
 
-table th{
-  padding: 0.5rem 0.75rem;          /* 控制上下空间 */
-  line-height: 0.75;               /* 控制行内文本的行高 */
-  vertical-align: middle;         /* 垂直居中 */
+table th {
+  padding: 0.5rem 0.75rem;
+  /* 控制上下空间 */
+  line-height: 0.75;
+  /* 控制行内文本的行高 */
+  vertical-align: middle;
+  /* 垂直居中 */
 }
+
 table td {
   border: 1px solid var(--misc-divider);
   padding: 0.2rem 0.5rem;
@@ -622,21 +658,22 @@ table td {
 }
 
 table tbody tr:nth-child(even) {
-  background-color: rgba(0,0,0,0.025);
+  background-color: rgba(0, 0, 0, 0.025);
 }
 
 html[data-theme="dark"] table tbody tr:nth-child(even) {
-  background-color: rgba(255,255,255,0.025);
+  background-color: rgba(255, 255, 255, 0.025);
 }
 
 table tbody tr:hover {
-  background-color: rgba(127,127,127,0.1);
+  background-color: rgba(127, 127, 127, 0.1);
   transition: var(--transition);
 }
 
 html[data-theme="dark"] table tbody tr:hover {
-  background-color: rgba(255,255,255,0.05);
+  background-color: rgba(255, 255, 255, 0.05);
 }
+
 .scroll-container {
   overflow-x: auto;
   width: 100%;
