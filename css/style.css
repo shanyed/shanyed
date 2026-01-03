@@ -53,6 +53,7 @@ html[data-theme="dark"] {
     --misc-divider: var(--misc-divider-dark);
     --code-background: var(--code-background-dark);
     --link-hover-background: var(--link-hover-background-dark);
+    --blockquote-background: var(--blockquote-background-dark);
   }
 }
 
