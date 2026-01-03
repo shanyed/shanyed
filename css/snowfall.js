@@ -1,0 +1,2 @@
+(e=>{["interactive","complete"].indexOf(document.readyState)!==-1?e():document.addEventListener("DOMContentLoaded",e)})(()=>{var t;const e=document.createElement("div");e.classList.add("snowfall");const a=250*(screen.width*screen.height)/(1920*1080);for(let n=0;n<Math.min(a,250);n++){const d=document.createElement("div");d.classList.add("snowflake"),e.appendChild(d)}(t=document.querySelector("body"))==null||t.appendChild(e)});
+//# sourceMappingURL=snowfall-Dv8K89iN.js.map
