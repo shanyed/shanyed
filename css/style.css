@@ -23,7 +23,7 @@
   --blockquote-background: #e8ecef;
   --blockquote-background-dark: #7979da;
   --blockquote-text: var(--text-secondary); 
-  --text-secondary-dark: #01847F;
+  --blockquote-text-dark: #01847F;
   --code-background: #f2f2f2;
 
 }
@@ -45,6 +45,7 @@ html[data-theme="dark"] {
   --code-background: var(--code-background-dark);
   --link-hover-background: var(--link-hover-background-dark);
   --blockquote-background: var(--blockquote-background-dark);
+  --blockquote-text: var(--blockquote-text-dark); 
 }
 
 @media (prefers-color-scheme: dark) {
@@ -277,12 +278,11 @@ blockquote {
   font-weight: 300;
   font-size: calc(var(--font-size-small) * 1.0667);
   line-height: var(--line-height-spacious);
-  color: var(--text-secondary);
+  color: var(--blockquote-text);
   margin: var(--spacing-unit) 0;
   padding: 0 calc(var(--spacing-unit) * 2);
   border-left: 3px solid var(--misc-divider);
   background: var(--blockquote-background);
-  --blockquote-text: var(--blockquote-text-dark);
 }
 
 pre,
