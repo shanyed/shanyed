@@ -116,6 +116,7 @@ h1,
   text-align: center;
   margin-bottom: var(--heading-spacing);
   color: var(--text-primary);
+  letter-spacing: 0.05em;
 }
 
 h2 {
@@ -125,9 +126,23 @@ h2 {
   text-align: center;
   margin-bottom: var(--heading-spacing);
   margin-top: calc(var(--spacing-unit) * 1.5);
-  color: var(--text-primary);
+  color: var(--text-secondary);
+  margin: calc(var(--spacing-unit) * 3) 0 var(--heading-spacing);
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+/* 使用伪元素在标题两侧画线 */
+h2::before,
+h2::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--misc-divider);
+  opacity: 0.3; /* 线条不要太黑，隐约可见即可 */
 }
 
+h2:not(:empty)::before { margin-right: 1.5rem; }
+h2:not(:empty)::after { margin-left: 1.5rem; }
 h3,
 h4,
 h5,
@@ -166,9 +181,12 @@ nav {
   left: 0;
   width: 275px;
   height: 100vh;
-  background: var(--misc-background);
+  background: rgba(246, 246, 246, 0.7); /* 使用半透明背景 */
+  backdrop-filter: blur(10px); /* 模糊背景 */
+  -webkit-backdrop-filter: blur(10px);
   border-right: 1px solid var(--misc-divider);
   text-align: center;
+  z-index: 100;
 }
 
 nav ul {
@@ -184,8 +202,8 @@ ul.sidebar {
 
 .main {
   width: min(79%, var(--main-content-width));
-  margin: calc(var(--spacing-unit) * 2) auto 0;
-  padding: 0 calc(var(--spacing-unit) * 2);
+  margin: calc(var(--spacing-unit) * 4) auto 0;
+  padding: 0 calc(var(--spacing-unit) * 4);
   flex: 1 0 auto;
   text-align: justify;
   font-size: var(--font-size-base);
